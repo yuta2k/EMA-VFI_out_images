@@ -56,6 +56,17 @@ By running above commands, you should get the follow examples by default:
   <img src=figs/out_Nx.gif width=340 /> 
 </p>
 
+## Implemented on this form: Batch interpolation
+
+This fork can batch frame interpolation from multiple image files.  
+
+```
+python interpolation.py --src /path/to/src_dir --dst /path/to/dst_dir
+```
+
+If you want to use a factor other than 2, specify option `--n` .  
+(Ex. if you want 30fps to 120fps, specify `--n 4` )
+
 ## :sparkles:	Training for Fixed-timestep Interpolation
 
 1. Download [Vimeo90K dataset](http://toflow.csail.mit.edu/)
