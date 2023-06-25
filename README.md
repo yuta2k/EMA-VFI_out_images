@@ -56,7 +56,7 @@ By running above commands, you should get the follow examples by default:
   <img src=figs/out_Nx.gif width=340 /> 
 </p>
 
-## Implemented on this form: Batch interpolation
+## Implemented on this fork: Batch interpolation
 
 This fork can batch frame interpolation from multiple image files.  
 
