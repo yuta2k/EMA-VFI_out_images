@@ -1,3 +1,4 @@
 ckpt/*.pkl
+log/train_EMAVFI/*
 Pipfile
 Pipfile.lock
