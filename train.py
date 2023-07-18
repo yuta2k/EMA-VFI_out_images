@@ -90,6 +90,8 @@ if __name__ == "__main__":
     parser.add_argument('--data_path', type=str, help='data path of vimeo90k')
     args = parser.parse_args()
     torch.distributed.init_process_group(backend="nccl", world_size=args.world_size)
+    # for Windows
+    # torch.distributed.init_process_group(backend="gloo", world_size=args.world_size)
     torch.cuda.set_device(args.local_rank)
     if args.local_rank == 0 and not os.path.exists('log'):
         os.mkdir('log')

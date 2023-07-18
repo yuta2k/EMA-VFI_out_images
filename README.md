@@ -38,6 +38,7 @@ Runtime and memory usage compared with previous SOTA method:
 - opencv-python 4.6.0
 - timm 0.6.11
 - tqdm
+- tensorboard (for train)
 
 ## :sunglasses:	Play with Demos
 

@@ -12,6 +12,7 @@ numpy = "==1.23.1"
 opencv-python = "==4.6.0.66"
 timm = "==0.6.11"
 tqdm = "*"
+tensorboard = "*"
 
 [dev-packages]
 
