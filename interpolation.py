@@ -37,7 +37,9 @@ args = parser.parse_args()
 # EMA-VFI model setup
 ##########################################################
 
-assert args.model in ['ours_t', 'ours_small_t'], 'Model not exists!'
+pyDirPath = os.path.dirname(__file__)
+modelPath = os.path.join(pyDirPath, 'model', args.model + '.pkl')
+assert not os.path.exists(modelPath), 'Model not exists!'
 
 TTA = True
 if args.model == 'ours_small_t':
@@ -48,7 +50,7 @@ if args.model == 'ours_small_t':
         depth = [2, 2, 2, 2, 2]
     )
 else:
-    cfg.MODEL_CONFIG['LOGNAME'] = 'ours_t'
+    cfg.MODEL_CONFIG['LOGNAME'] = args.model
     cfg.MODEL_CONFIG['MODEL_ARCH'] = cfg.init_model_config(
         F = 32,
         depth = [2, 2, 2, 4, 4]
